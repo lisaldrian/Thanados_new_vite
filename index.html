@@ -1,13 +1,118 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Thanados New test </title>
+
+
+<!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <link rel="stylesheet" href="dist/style.css">
+  <script defer src="dist/script.js"></script>
+
+  <header class="header container">
+    <div class="header__title">
+      <h1> ENTITIES</h1> <!--header 1 -->
+      <span class= "header__subtitle">Total: 23,004 </span> 
+    </div>
+    
+    <fieldset 
+    class="header__toggle toggle" 
+    aria-label="theme toggle" 
+    role="radiogroup"
+    >
+    <div class="toggle__wrapper">
+      <input type="radio" name="theme" id="dark"/>
+      <!--<input type="radio" name="theme" id="system"/>-->
+      <input type="radio" name="theme" id="light"/>
+      <span aria-hidden="true" class="toggle__background"></span>
+      <span aria-hidden="true" class="toggle__button"></span> 
+    </div>
+    <label for="dark">Dark</label> <!--moved down so other items are above -->
+    <label for="light">Light</label> 
+      </fieldset>
+  </header>
+
+  <main>
+    <section class="container cards">
+      <div class="card card--places">
+        <div class="card__icon">
+          <img src="/images/places_550.png" alt="Places">
+        </div>
+        <div class="card__label">Places</div>
+        <div class="card__description">Lorem ipsum dolor sit amet consectetur. Risus malesuada feugiat sit integer non. Nisl blandit at scelerisque id arcu nisi nisl lacus.</div>
+        <div class="card__count">356 entities</div>  <!--put <span>365</span> around it and target card_count to get number from somewhere, API -->
+      </div>
+  
+      <div class="card card--actors">
+        <div class="card__icon">
+          <img src="/images/actors_550.png" alt="Actors">
+        </div>
+        <div class="card__label">Actors</div>
+        <div class="card__description">Lorem ipsum dolor sit amet consectetur. Risus malesuada feugiat sit integer non. Nisl blandit at scelerisque id arcu nisi nisl lacus.</div>
+        <div class="card__count">356 entities</div>
+      </div>
+  
+      <div class="card card--events">
+        <div class="card__icon">
+          <img src="/images/events_550.png" alt="Events">
+        </div>
+        <div class="card__label">Events</div>
+        <div class="card__description">Lorem ipsum dolor sit amet consectetur. Risus malesuada feugiat sit integer non. Nisl blandit at scelerisque id arcu nisi nisl lacus.</div>
+        <div class="card__count">356 entities</div>
+      </div>
+  
+      <div class="card card--artifacts">
+        <div class="card__icon">
+          <img src="/images/artifacts_550.png" alt="Artifacts">
+        </div>
+        <div class="card__label">Artifacts</div>
+        <div class="card__description">Lorem ipsum dolor sit amet consectetur. Risus malesuada feugiat sit integer non. Nisl blandit at scelerisque id arcu nisi nisl lacus.</div>
+        <div class="card__count">356 entities</div>
+      </div>
+
+      <div class="card card--sources">
+        <div class="card__icon">
+          <img src="/images/sources_550.png" alt="Sources">
+        </div>
+        <div class="card__label">Sources</div>
+        <div class="card__description">Lorem ipsum dolor sit amet consectetur. Risus malesuada feugiat sit integer non. Nisl blandit at scelerisque id arcu nisi nisl lacus.</div>
+        <div class="card__count">356 entities</div>
+      </div>
+
+      <div class="card card--references">
+        <div class="card__icon">
+          <img src="/images/reference_550.png" alt="References">
+        </div>
+        <div class="card__label">References</div>
+        <div class="card__description">Lorem ipsum dolor sit amet consectetur. Risus malesuada feugiat sit integer non. Nisl blandit at scelerisque id arcu nisi nisl lacus.</div>
+        <div class="card__count">356 entities</div>
+      </div>
+    </section>
+  </main>
+
+
+  
+  
+
+  
+  <div class="attribution">
+    This is just a test.
+     <a href="#">Lisa Aldrian</a>.
+  </div>
+</body>
 </html>
