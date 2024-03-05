@@ -1,0 +1,6 @@
+@use '../util'as *;
+
+/* Change the color of all icons to black */
+.navbar-nav.sm-icons .nav-link i {
+        color: black;
+    }
