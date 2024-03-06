@@ -1,6 +1,7 @@
 @use '../util'as *;
 
-/* Change the color of all icons to black */
-.navbar-nav.sm-icons .nav-link i {
-        color: black;
-    }
+.navbar-nav {
+    flex-wrap: nowrap; /* Prevent wrapping of navbar items */
+    //overflow-x: auto; /* Enable horizontal scrolling for overflow */
+    white-space: nowrap; /* Prevent text wrapping */
+}

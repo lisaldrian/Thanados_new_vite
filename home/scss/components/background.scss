@@ -1,0 +1,13 @@
+@use '../util'as *; /*to use mixins etc*/
+
+.background-container {
+    background-image: url('/images/Blank_map_of_Europe_central_network.png');
+    opacity: 0.5;
+    background-size: cover; /* Adjusts the size of the background image */
+    background-position: center; /* Centers the background image horizontally and vertically */
+    width: 100%; /* Ensures the container spans the width of its parent element */
+    min-height: 800px; /* Adjusts the height of the container */
+   position: relative; /* Positions the container relative to its parent */
+}
+    // Add additional styles or nested selectors if needed */
+
