@@ -14,7 +14,7 @@
         font-size: rem(14);
         color: var(--toggle);
         align-self: center;
-        font-weight: 700;
+        font-weight: 300;
 
         &[for='dark'] {
             grid-column: 1 / 2;
@@ -55,7 +55,7 @@
         
     
             &:focus ~ .toggle__button {
-            border: 1px solid white;
+            border: 0.5px solid white;
           }
         }
     
