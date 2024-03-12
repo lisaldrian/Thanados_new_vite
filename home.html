@@ -21,7 +21,7 @@
 <body>
 
   <link rel="stylesheet" href="home/scss/style.scss">
-  <script defer src="dist/script.js"></script>
+  <script defer src="home/js/script.js"></script>
  
   <header class="header container">
       <!-- Center Navbar-->
@@ -30,12 +30,12 @@
             <a class="navbar-brand ms-3" href="/">
                 <img id="nav-logo" src="images/LOGOIPSUM-05.png" height="100" alt="" title="Home">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="navbar-home" aria-controls="navbar-home" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
               <!--Collapsible Content-->
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <div class="collapse navbar-collapse" id="navbar-home">
                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a id="nav-home" class="nav-link" href="/home">HOME</a>
@@ -121,6 +121,29 @@
   <main>
     <div class="background-container"></div> <!-- Background.scss-->
       </div>
+
+      <div id="counters" class="row text-center pt-3">
+        <div class="col-sm">
+            <h4 class="statistic-counter">563</h4>
+            <p>Cemeteries</p>
+        </div>
+        <div class="col-sm">
+            <h4 class="statistic-counter">5363</h4>
+            <p>Graves</p>
+        </div>
+        <div class="col-sm">
+            <h4 class="statistic-counter">5643</h4>
+            <p>Individuals</p>
+        </div>
+        <div class="col-sm">
+            <h4 class="statistic-counter">11555</h4>
+            <p>Finds</p>
+        </div>
+        <div class="col-sm">
+            <h4 class="statistic-counter">6169</h4>
+            <p>Osteology Datasets</p>
+        </div>
+    </div>
   </main>
 
   <!-- Footer Logos-->

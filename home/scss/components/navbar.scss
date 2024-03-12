@@ -1,7 +1,9 @@
 @use '../util'as *;
 
 .navbar-nav {
-    flex-wrap: nowrap; /* Prevent wrapping of navbar items */
+   // flex-wrap: nowrap; /* Prevent wrapping of navbar items */
     //overflow-x: auto; /* Enable horizontal scrolling for overflow */
     white-space: nowrap; /* Prevent text wrapping */
+    background-color: var(navbar-color-light); //not working yet why?
 }
+

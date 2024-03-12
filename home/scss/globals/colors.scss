@@ -23,6 +23,10 @@
     --light-text2: hsl(230, 17%, 14%);
     --light-card: hsl(0, 0%, 85%);
     --light-card-hover: hsl(227, 33%, 91%);
+    --counters-bg-light: hsl(208, 34%, 60%);
+    --counters-bg-dark: hsl(208, 24%, 44%);
+    --navbar-color-light: hsl(14, 0%, 100%); //check 
+    --navbar-color-dark: hsl(0, 3%, 44%); //check 
   
     --toggle: var(--toggle-light);
     --background: var(--light-bg);
@@ -33,6 +37,9 @@
    
     --toggle-bg: var(--toggle-bg-light);
     --toggle-button: var(--toggle-button-light);
+    --navbar-color: var(--navbar-color-light); // check
+    --counters-bg: var(--counters-bg-light);
+    
 }
 
 @media (prefers-color-scheme: dark) {
@@ -49,6 +56,8 @@
           var(--toggle-bg-start) 98.02%
         );
         --toggle-button: var(--dark-bg);
+        --navbar-color: var(--navbar-color-dark); // check
+        --counters-bg: var(--counters-bg-dark);
     }
 }
 
@@ -71,6 +80,8 @@ body.light {
       var(--toggle-bg-start) 98.02%
     );
     --toggle-button: var(--toggle-button-light);
+    --navbar-color: var(--navbar-color-light); // check
+    --counters-bg: var(--counters-bg-light);
   }
 
   
@@ -87,4 +98,6 @@ body.light {
         var(--toggle-bg-start) 98.02%
       );
       --toggle-button: var(--dark-bg);
+      --navbar-color: var(--navbar-color-dark); // check
+      --counters-bg: var(--counters-bg-dark);
   }
