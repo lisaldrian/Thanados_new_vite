@@ -25,8 +25,13 @@
     --light-card-hover: hsl(227, 33%, 91%);
     --counters-bg-light: hsl(208, 34%, 60%);
     --counters-bg-dark: hsl(208, 24%, 44%);
-    --navbar-color-light: hsl(14, 0%, 100%); //check 
-    --navbar-color-dark: hsl(0, 3%, 44%); //check 
+    --navbar-color-light: hsl(14, 0%, 100%);
+    --navbar-color-dark: hsl(0, 3%, 44%);
+    --logo-color-light: black; //doesn't work yet
+    --logo-color-dark: white;//doesn't work 
+    --border-color-dark: hsl(0, 2%, 68%);
+    --border-color-light: hsl(0, 0%, 0%);
+  
   
     --toggle: var(--toggle-light);
     --background: var(--light-bg);
@@ -37,8 +42,10 @@
    
     --toggle-bg: var(--toggle-bg-light);
     --toggle-button: var(--toggle-button-light);
-    --navbar-color: var(--navbar-color-light); // check
+    --navbar-color: var(--navbar-color-light); 
     --counters-bg: var(--counters-bg-light);
+    --logo-color: var(--logo-color-dark);//doesn't work yet
+    --border-color: var(--border-color-dark); //check
     
 }
 
@@ -58,6 +65,10 @@
         --toggle-button: var(--dark-bg);
         --navbar-color: var(--navbar-color-dark); // check
         --counters-bg: var(--counters-bg-dark);
+        .navbar-brand img {
+          fill: var(--logo-color-light);
+          --border-color: var(--border-color-dark);
+      }
     }
 }
 
@@ -82,6 +93,9 @@ body.light {
     --toggle-button: var(--toggle-button-light);
     --navbar-color: var(--navbar-color-light); // check
     --counters-bg: var(--counters-bg-light);
+    .navbar-brand img {
+      fill: var(--logo-color-dark);}
+      --border-color: var(--border-color-light);
   }
 
   
@@ -100,4 +114,9 @@ body.light {
       --toggle-button: var(--dark-bg);
       --navbar-color: var(--navbar-color-dark); // check
       --counters-bg: var(--counters-bg-dark);
+      --logo-color: var(--logo-color-light);
+      .navbar-brand img {
+        fill: var(--logo-color-light);
+        --border-color: var(--border-color-light);
+    }
   }
