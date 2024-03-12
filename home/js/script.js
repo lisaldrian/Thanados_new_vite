@@ -21,7 +21,7 @@ const colorModeFromLocalStorage = () => {
 const colorModeFromPreferences = () => {
   return window.matchMedia('(prefers-color-scheme: dark)').matches 
               ? 'dark'
-              : 'light';
+              : 'light';// If preference is set or does not match anything (light is default)
 };
 
 const loadAndUpdateColor = () => {

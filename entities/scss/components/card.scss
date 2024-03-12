@@ -1,6 +1,7 @@
 @use '../util'as *;
 
 .cards {//also possible make a card-grid or whatever class and define flexbox in layout scss for breakpoints
+    margin-top: 100px;
     display: grid; 
     grid-template-columns: 1fr;
     //display: flex;
