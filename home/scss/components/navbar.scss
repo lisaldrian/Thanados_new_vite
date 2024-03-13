@@ -4,7 +4,10 @@
    // flex-wrap: nowrap; /* Prevent wrapping of navbar items */
     //overflow-x: auto; /* Enable horizontal scrolling for overflow */
     white-space: nowrap; /* Prevent text wrapping */
+    
 }
+.container-fluid //navbar container
+    //{background-color: var(--navbar-color);}
 
 .navbar-brand img {
         fill: var(--icon-color); /* This will apply the color to the SVG image - does not work yet*/
