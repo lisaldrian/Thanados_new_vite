@@ -1,17 +1,9 @@
 @use '../util'as *;
 
 .navbar-nav {
-   // flex-wrap: nowrap; /* Prevent wrapping of navbar items */
-    //overflow-x: auto; /* Enable horizontal scrolling for overflow */
     white-space: nowrap; /* Prevent text wrapping */
-}
 
-.navbar-brand img {
-        fill: var(--icon-color); /* This will apply the color to the SVG image - does not work yet*/
-    }
-
-    .navbar-nav {
-        .nav-link {
+    .nav-link {
             position: relative; 
             // Set transparent border by default
             border-bottom: 2px solid transparent;
@@ -35,6 +27,9 @@
                     background-color: #151515; 
                 }
             }
+        }
+        .navbar-brand img {
+            fill: var(--icon-color); /* This will apply the color to the SVG image - does not work yet*/
         }
     
 
