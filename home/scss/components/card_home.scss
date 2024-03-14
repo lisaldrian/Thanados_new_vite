@@ -14,28 +14,20 @@
     display: none; // Initially hide the cards_home section
 }
 
-#counters:hover ~ .cards_home {
+#counters:hover ~ .cards_home,
+.cards_home:hover {
     display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    //display: flex;
-    //flex-direction: column;
-    //flex-wrap: wrap;
     gap: rem(1);
     padding-left: rem(2);
-
-    
-
-    @include breakpoint (large) {
-        //display: flex;
-    //flex-direction: column;
-    //flex-wrap: wrap;
-    grid-template-columns: repeat(5, 1fr);
+    // Adjust grid template columns for large screens
+    @include breakpoint(large) {
+        grid-template-columns: repeat(5, 1fr);
     }
-
+    // Adjust grid template columns for medium screens
     @include breakpoint(medium) {
         grid-template-columns: repeat(5, 1fr);
-}
-
+    }
 }
 
 .card_home{
@@ -150,6 +142,13 @@
     color: var(--text-color1);
     font-weight: 300;
     text-align: justify;
+
+    // Adjust font size for medium screens
+    @include breakpoint-down(large) {
+        @include breakpoint(medium) {
+            font-size: rem(14); // Set your desired font size
+        }
+    }
 }
 
 &__count {
