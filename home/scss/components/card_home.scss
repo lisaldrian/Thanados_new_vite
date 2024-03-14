@@ -1,19 +1,27 @@
 @use '../util'as *;
 
+.background-container {
+    position: relative;
+}
+
+
 .cards_home {//also possible make a card-grid or whatever class and define flexbox in layout scss for breakpoints#
-    position: absolute; /* Position the cards_home section */
-    top: rem(650);
-    left: rem(50); /* Align it to the left of the parent container */
+    position: absolute;
+    top: calc(100% - rem(480));// Position it just above the counters
+    z-index: 1; // Ensure cards are above counters
+    left: 0;
     display: none; // Initially hide the cards_home section
 }
 
 #counters:hover ~ .cards_home {
     display: grid; 
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     //display: flex;
     //flex-direction: column;
     //flex-wrap: wrap;
-    gap: rem(30);
+    gap: rem(10);
+
+    
 
 
     @include breakpoint(medium) {
