@@ -5,11 +5,12 @@
 }
 
 
-.cards_home {//also possible make a card-grid or whatever class and define flexbox in layout scss for breakpoints#
-    position: absolute;
-    top: calc(100% - rem(640));// Position it just above the counters
-    z-index: 1; // Ensure cards are above counters
+.cards_home {
+    position: fixed;
+    bottom: rem(180);
+    //top: calc(100% - rem(530));
     left: 0;
+    z-index: 1;
     display: none; // Initially hide the cards_home section
 }
 
@@ -19,15 +20,10 @@
     //display: flex;
     //flex-direction: column;
     //flex-wrap: wrap;
-    gap: rem(10);
+    gap: rem(1);
+    padding-left: rem(2);
 
     
-
-
-    @include breakpoint(medium) {
-        grid-template-columns: repeat(2, 1fr);
-    
-        //flex-direction: row;
 
     @include breakpoint (large) {
         //display: flex;
@@ -35,18 +31,17 @@
     //flex-wrap: wrap;
     grid-template-columns: repeat(5, 1fr);
     }
-       
-}
+
+    @include breakpoint(medium) {
+        grid-template-columns: repeat(5, 1fr);
 }
 
+}
 
 .card_home{
-    //flex: 1;
-    position: relative;
     overflow: hidden;
     background: var(--card-bg);
     color: var(--text-color2);
-    //width: rem(255); //Figma Thanados 310 will be too wide I guess
     text-align: center;
     padding: rem(20);
     border-radius: rem(5);
