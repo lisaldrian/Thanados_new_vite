@@ -10,4 +10,16 @@
     position: relative; /* Positions the container relative to its parent */
 }
     // Add additional styles or nested selectors if needed */
-
+    .background-overlay {
+        position: absolute;
+        opacity: 0.6;
+        top: 50%; /* Center vertically */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Center the element precisely */
+    }
+    
+    /* Adjust the size of the overlay image as needed */
+    .background-overlay img {
+        max-width: 100%; /* Ensure the image does not exceed the container width */
+        max-height: 100%; /* Ensure the image does not exceed the container height */
+    }
