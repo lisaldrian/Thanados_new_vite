@@ -11,6 +11,7 @@
 .tab_places{
     margin-top: rem(45);
     width:14.2857vw;
+    height: 100vh;
     background: var(--card-bg);
     color: var(--text-color2);
     text-align: center;
@@ -21,7 +22,7 @@
     
    &__icon{
     img {
-        max-width: 70%; /* Set the width of the image */
+        max-width: 90%; /* Set the width of the image */
         height: auto;}
    
     }
@@ -30,15 +31,16 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: rem (20);
+        font-size: rem(20);
         font-weight: 600;
-        margin-bottom: rem(15);
+        margin-top: rem(20);
+        margin-bottom: rem(30);
         text-transform: uppercase;
         color: var(--text-color2);
         letter-spacing: rem(1);
 }
 
-    &__description {
+    /*&__description {
         color: var(--text-color1);
         font-weight: 300;
         text-align: justify;
@@ -49,18 +51,60 @@
         font-size: rem(12);
         margin-top: rem(20);
     }
-   } 
+   } */
 
-   .btn-secondary {
-    
-   }
 
-   .tab_places .d-grid {
-    height: 100%; /* Ensure the grid fills the height of tab_places */
-    justify-content: center;
-   
-  
+// Define button sizes
+$button-sizes: (
+  'small': (padding-y: 5px, padding-x: 10px, font-size: 12px, border-radius: 3px),
+  'medium': (padding-y: 8px, padding-x: 15px, font-size: 14px, border-radius: 5px),
+  'large': (padding-y: 10px, padding-x: 20px, font-size: 16px, border-radius: 7px),
+  'xlarge': (padding-y: 30px, padding-x: 20px, font-size: 20px, border-radius: 7px)
+);
+
+// Mixin for applying button size
+@mixin apply-button-size($padding-y, $padding-x, $font-size, $border-radius) {
+  padding: $padding-y $padding-x;
+  font-size: $font-size;
+  border-radius: $border-radius;
 }
+
+// Mixin for breakpoints
+@mixin breakpoint($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}
+
+// Mixin for applying button size from the map
+@mixin button-size($size) {
+  $size-props: map-get($button-sizes, $size);
+  @include apply-button-size($size-props...);
+}
+
+// Apply button size based on screen size
+.my-button {
+  @include button-size('medium'); // Default size for medium screens
+  @include breakpoint-down('small') {
+    @include button-size('small'); // Adjust size for small screens
+  }
+  @include breakpoint('large') {
+    @include button-size('large'); // Adjust size for large screens
+  }
+  @include breakpoint('xlarge') {
+    @include button-size('xlarge');
+}
+
+}
+}
+
+ 
    
 
 
