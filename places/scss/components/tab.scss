@@ -1,0 +1,66 @@
+@use '../util'as *;
+
+.tabs {//also possible make a card-grid or whatever class and define flexbox in layout scss for breakpoints
+    display: flex; 
+    position: fixed;
+    top: auto;
+    right: 0;
+    justify-content: flex-end;
+}
+
+.tab_places{
+    margin-top: rem(45);
+    width:14.2857vw;
+    background: var(--card-bg);
+    color: var(--text-color2);
+    text-align: center;
+    padding: rem(20);
+    border-radius: rem(5);
+    transition: backbround 150ms ease-in-out;
+    cursor: pointer;
+    
+   &__icon{
+    img {
+        max-width: 70%; /* Set the width of the image */
+        height: auto;}
+   
+    }
+
+    &__label{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: rem (20);
+        font-weight: 600;
+        margin-bottom: rem(15);
+        text-transform: uppercase;
+        color: var(--text-color2);
+        letter-spacing: rem(1);
+}
+
+    &__description {
+        color: var(--text-color1);
+        font-weight: 300;
+        text-align: justify;
+    }
+
+    &__count {
+        color: var(--dark-text);
+        font-size: rem(12);
+        margin-top: rem(20);
+    }
+   } 
+
+   .btn-secondary {
+    
+   }
+
+   .tab_places .d-grid {
+    height: 100%; /* Ensure the grid fills the height of tab_places */
+    justify-content: center;
+   
+  
+}
+   
+
+
