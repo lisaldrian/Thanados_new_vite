@@ -23,21 +23,6 @@
         }
     }
 
-    /*label {
-        &[for='system'] {
-            grid-column: 1 / 4;
-            grid-row: 2 / 3;
-            justify-self: center;
-            align-self: start;
-        }
-    }*/
-
-        /*label {
-        &[for='light'] {
-            grid-column: 3 / 4;
-         
-        }
-        }*/
     
     &__wrapper{   
         position: relative;
@@ -68,7 +53,7 @@
         top: 0;
         border-radius: rem(12);
         pointer-events: none;
-        background: var(--toggle-bg); //linear-gradient(225deg, var(--toggle-bg-end)0%, var(--toggle-bg-start) 98.02%);
+        background: var(--toggle-bg); 
 
     }
 

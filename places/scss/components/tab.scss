@@ -9,8 +9,11 @@
 }
 
 .tab_places{
-    margin-top: rem(45);
-    width:14.2857vw;
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Center items horizontally */
+    margin-top: rem(15);
+    width:17vw;
     height: 100vh;
     background: var(--card-bg);
     color: var(--text-color2);
@@ -56,10 +59,10 @@
 
 // Define button sizes
 $button-sizes: (
-  'small': (padding-y: 5px, padding-x: 10px, font-size: 12px, border-radius: 3px),
-  'medium': (padding-y: 8px, padding-x: 15px, font-size: 14px, border-radius: 5px),
-  'large': (padding-y: 10px, padding-x: 20px, font-size: 16px, border-radius: 7px),
-  'xlarge': (padding-y: 30px, padding-x: 20px, font-size: 20px, border-radius: 7px)
+  'small': (padding-y: 5px, padding-x: 2px, font-size: 12px, border-radius: 3px),
+  'medium': (padding-y: 8px, padding-x: 3px, font-size: 14px, border-radius: 5px),
+  'large': (padding-y: 10px, padding-x: 10px, font-size: 16px, border-radius: 7px),
+  'xlarge': (padding-y: 15px, padding-x: 10px, font-size: 18px, border-radius: 7px)
 );
 
 // Mixin for applying button size
@@ -89,7 +92,14 @@ $button-sizes: (
 }
 
 // Apply button size based on screen size
-.my-button {
+.entity-button {
+
+  background-color:var(--entity-button);
+  color: var(--entity-button-font);
+  border-color: var(--entity-button);
+
+  
+
   @include button-size('medium'); // Default size for medium screens
   @include breakpoint-down('small') {
     @include button-size('small'); // Adjust size for small screens
@@ -99,10 +109,18 @@ $button-sizes: (
   }
   @include breakpoint('xlarge') {
     @include button-size('xlarge');
-}
+
+  }
+    &:hover {
+      background-color: var(--entity-button-hover);
+      border-color: var(--entity-button-hover);
+      color: var(--entity-button-font-hover);
+
+//from 550px downwards - tab element shouldn't be shown; other layout strategy
+
 
 }
-}
+}}
 
  
    

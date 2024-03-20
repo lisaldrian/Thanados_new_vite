@@ -1,0 +1,67 @@
+.col-lg-10 {
+    #map {
+        height: 853px;
+        position: relative;
+
+        .leaflet-container {
+            &.leaflet-touch,
+            &.leaflet-fade-anim,
+            &.leaflet-grab,
+            &.leaflet-touch-drag,
+            &.leaflet-touch-zoom {
+                // Add styles for these classes
+            }
+
+            .leaflet-pane {
+                &.leaflet-map-pane {
+                    transform: translate3d(-202px, 0px, 0px);
+                }
+
+                .leaflet-proxy {
+                    transform: translate3d(71681.5px, 45171.5px, 0px);
+                    scale: 256;
+                }
+            }
+
+            .leaflet-control-container {
+                // Add styles for control container
+            }
+        }
+
+        .leaflet-control-container {
+            .leaflet-top, .leaflet-bottom {
+                &.leaflet-left {
+                    // Add styles for leaflet top or bottom left controls
+                }
+
+                &.leaflet-right {
+                    .leaflet-control-layers {
+                        // Add styles for leaflet control layers
+                    }
+                }
+            }
+        }
+
+        .leaflet-pane {
+            &.leaflet-shadow-pane {
+                // Add styles for shadow pane
+            }
+
+            &.leaflet-overlay-pane {
+                // Add styles for overlay pane
+            }
+
+            &.leaflet-marker-pane {
+                // Add styles for marker pane
+            }
+
+            &.leaflet-tooltip-pane {
+                // Add styles for tooltip pane
+            }
+
+            &.leaflet-popup-pane {
+                // Add styles for popup pane
+            }
+        }
+    }
+}
