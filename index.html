@@ -10,7 +10,7 @@
 
 
 <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
@@ -24,6 +24,7 @@
 
   <link rel="stylesheet" href="entities\scss\style.scss">
   <script defer src="home/js/script.js"></script>
+  <script defer src="entities/js/entity_links.js"></script>
 
   <header class="header container">
     <!-- Center Navbar-->
@@ -36,7 +37,7 @@
               <span class="navbar-toggler-icon"></span>
           </button>
 
-            <!--Collapsible Content-->
+            <!--Navbar categories/links-->
           <div class="collapse navbar-collapse" id="navbar-home">
                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
@@ -126,16 +127,17 @@
 
   <main>
     <section class="container cards">
-      <div class="card card--places">
+      <div id="places-card" class="card card--places">
         <div class="card__icon">
           <img src="/images/places_550.png" alt="Places">
         </div>
         <div class="card__label">Places</div>
+        
         <div class="card__description">Lorem ipsum dolor sit amet consectetur. Risus malesuada feugiat sit integer non. Nisl blandit at scelerisque id arcu nisi nisl lacus.</div>
         <div class="card__count">356 entities</div>  <!--put <span>365</span> around it and target card_count to get number from somewhere, API -->
       </div>
   
-      <div class="card card--actors">
+      <div id="actors-card" class="card card--actors">
         <div class="card__icon">
           <img src="/images/actors_550.png" alt="Actors">
         </div>
@@ -144,7 +146,7 @@
         <div class="card__count">356 entities</div>
       </div>
   
-      <div class="card card--events">
+      <div id="events-card" class="card card--events">
         <div class="card__icon">
           <img src="/images/events_550.png" alt="Events">
         </div>
@@ -153,7 +155,7 @@
         <div class="card__count">356 entities</div>
       </div>
   
-      <div class="card card--artifacts">
+      <div id="artifacts-card" class="card card--artifacts">
         <div class="card__icon">
           <img src="/images/artifacts_550.png" alt="Artifacts">
         </div>
@@ -162,7 +164,7 @@
         <div class="card__count">356 entities</div>
       </div>
 
-      <div class="card card--sources">
+      <div id="sources-card" class="card card--sources">
         <div class="card__icon">
           <img src="/images/sources_550.png" alt="Sources">
         </div>
@@ -171,7 +173,7 @@
         <div class="card__count">356 entities</div>
       </div>
 
-      <div class="card card--references">
+      <div id="references-card" class="card card--references">
         <div class="card__icon">
           <img src="/images/reference_550.png" alt="References">
         </div>
