@@ -1,15 +1,9 @@
 @use '../util'as *;
 
-.tabs {//also possible make a card-grid or whatever class and define flexbox in layout scss for breakpoints
-    display: flex; 
-    position: fixed;
-    top: auto;
-    right: 0;
-    justify-content: flex-end;
-}
-
 .tab_places{
     display: flex;
+    right: 0;
+    position: fixed;
     flex-direction: column; /* Align items vertically */
     align-items: center; /* Center items horizontally */
     margin-top: rem(15);
