@@ -1,4 +1,17 @@
 @use '../util'as *;
+.container {
+  display: flex;
+
+  .left-panel,
+  .right-panel {
+      flex: 1;
+      padding: 10px;
+  }
+
+  @media (max-width: 768px) {
+      flex-direction: column;
+  }
+}
 
 .tab_places{
     display: flex;

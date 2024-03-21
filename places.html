@@ -9,7 +9,9 @@
   <title>Places </title>
 
 <!-- Leaflet CSS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
 
 <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +30,9 @@
   <link rel="stylesheet" href="places\scss\style.scss">
 
    <!-- Leaflet JavaScript -->
-   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
     <!-- Custom JavaScript -->
   <script defer src="home/js/script.js"></script>
 
@@ -131,25 +135,90 @@
 
 </header>
 
-  <main>
-        <div class="tabs_places">
-            <div class="tab_places">
-                <div class="tab_places__icon">
-                    <img src="/images/places_550.png" alt="Places">
-                
-                <div class="tab_places__label">Places</div>
-              
-                <div class="d-grid gap-3 mx-auto text-center">
-                  <button class="btn btn-secondary entity-button" type="button">CEMETERIES</button>
-                  <button class="btn btn-secondary entity-button" type="button">CHURCHES</button>
-                  <button class="btn btn-secondary entity-button" type="button">MONASTERIES</button>
-                  <button class="btn btn-secondary entity-button" type="button">FORTRESSES</button></div>
+<main>
+  <div class="container">
+    <div class="right-panel">
+      <div class="tabs_places">
+          <div class="tab_places">
+            <div class="tab_places__icon">
+              <img src="/images/places_550.png" alt="Places">
+            </div>
+            <div class="tab_places__label">Places</div>
+            <div class="d-grid gap-3 mx-auto text-center">
+              <button class="btn btn-secondary entity-button" type="button">CEMETERIES</button>
+              <button class="btn btn-secondary entity-button" type="button">CHURCHES</button>
+              <button class="btn btn-secondary entity-button" type="button">MONASTERIES</button>
+              <button class="btn btn-secondary entity-button" type="button">FORTRESSES</button>
+            </div>
+         
+    <div class="left-panel">
+        <div id="map" class="leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0">
+                <div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(145px, 0px, 0px);">
+                  <div class="leaflet-pane leaflet-tile-pane">
+                    <div class="leaflet-layer" style="z-index: 1; opacity: 1;">
+                      <div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 25; transform: translate3d(0px, 0px, 0px) scale(1);"></div>
+                    </div>
+                  </div>
+                  <div class="leaflet-pane leaflet-shadow-pane"></div>
+                  <div class="leaflet-pane leaflet-overlay-pane">
+                    <canvas class="leaflet-zoom-animated" width="2210" height="2906" style="transform: translate3d(-237px, -121px, 0px); width: 1105px; height: 1453px;"></canvas>
+                  </div>
+                  <div class="leaflet-pane leaflet-marker-pane"></div>
+                  <div class="leaflet-pane leaflet-tooltip-pane"></div>
+                  <div class="leaflet-pane leaflet-popup-pane"></div>
+                  <div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(8799.5px, 5665.5px, 0px) scale(32);"></div>
+                </div>
+                <div class="leaflet-control-container">
+                  <div class="leaflet-top leaflet-left"></div>
+                  <div class="leaflet-top leaflet-right">
+                    <div class="leaflet-control-layers leaflet-control" aria-haspopup="true">
+                      <a class="leaflet-control-layers-toggle" href="#" title="Layers"></a>
+                      <section class="leaflet-control-layers-list">
+                        <div class="leaflet-control-layers-base">
+                          <label>
+                            <div>
+                              <input type="radio" class="leaflet-control-layers-selector" name="leaflet-base-layers_126" checked="checked">
+                              <span> Landscape</span>
+                            </div>
+                          </label>
+                          <!-- Other radio inputs -->
+                        </div>
+                        <div class="leaflet-control-layers-separator"></div>
+                        <div class="leaflet-control-layers-overlays">
+                          <label>
+                            <div>
+                              <input type="checkbox" class="leaflet-control-layers-selector" checked="">
+                              <span> Sites</span>
+                            </div>
+                          </label>
+                          <!-- Other checkbox inputs -->
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                  <div class="leaflet-bottom leaflet-left">
+                    <div class="leaflet-control-zoom leaflet-control-layer-container leaflet-bar leaflet-control">
+                      <a class="leaflet-control-loading"></a>
+                    </div>
+                    <div class="easy-button-button-sitecount leaflet-control" title="563 sites in current map bounds">
+                      <span id="counter"> 563 sites</span>
+                    </div>
+                    <div class="leaflet-control-scale leaflet-control">
+                      <div class="leaflet-control-scale-line" style="width: 62px;">100 km</div>
+                    </div>
+                  </div>
+                  <div class="leaflet-bottom leaflet-right">
+                    <div class="leaflet-control-attribution leaflet-control"> 
+                      <a href="#" style="display: inline-block" class="togglebtn" onclick="$( this ).next().toggle()">© Info</a>
+                      <div id="myattr" class="mapAttr" style="display: none;">&nbsp; THANADOS. Map Tiles: © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>. Hillshade Sources: Esri, Airbus DS, USGS, NGA, NASA, CGIAR, N Robinson, NCEAS, NLS, OS, NMA, Geodatastyrelsen, Rijkswaterstaat, GSA, Geoland, FEMA, Intermap, and the GIS user community
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-  
-    
-  </div>
-   
-  </main>
+            </div>
+            
+</main>
 
 
   
@@ -160,5 +229,8 @@
     This is just a test.
      <a href="#">Lisa Aldrian</a>.
   </div>
+
+
+  <script src="places/js/map.js"></script>
 </body>
 </html>
