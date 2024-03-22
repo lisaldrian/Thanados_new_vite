@@ -1,7 +1,5 @@
+@use '../util'as *;
 #map {
-    min-width: 300px;
-    height: 300px;
-    position: relative;
     &.leaflet-container {
         &.leaflet-touch,
         &.leaflet-retina,

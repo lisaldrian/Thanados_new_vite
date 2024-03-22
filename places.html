@@ -27,7 +27,7 @@
 </head>
 <body>
 
-  <link rel="stylesheet" href="places\scss\style.scss">
+  <link rel="stylesheet" href="places/scss/style.scss">
 
    <!-- Leaflet JavaScript -->
    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
@@ -136,38 +136,24 @@
 </header>
 
 <main>
-  <div class="container">
-    <div class="right-panel">
-      <div class="tabs_places">
-          <div class="tab_places">
-            <div class="tab_places__icon">
-              <img src="/images/places_550.png" alt="Places">
-            </div>
-            <div class="tab_places__label">Places</div>
-            <div class="d-grid gap-3 mx-auto text-center">
-              <button class="btn btn-secondary entity-button" type="button">CEMETERIES</button>
-              <button class="btn btn-secondary entity-button" type="button">CHURCHES</button>
-              <button class="btn btn-secondary entity-button" type="button">MONASTERIES</button>
-              <button class="btn btn-secondary entity-button" type="button">FORTRESSES</button>
-            </div>
-         
-    <div class="left-panel">
-        <div id="map" class="leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0">
-                <div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(145px, 0px, 0px);">
-                  <div class="leaflet-pane leaflet-tile-pane">
-                    <div class="leaflet-layer" style="z-index: 1; opacity: 1;">
-                      <div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 25; transform: translate3d(0px, 0px, 0px) scale(1);"></div>
-                    </div>
-                  </div>
-                  <div class="leaflet-pane leaflet-shadow-pane"></div>
-                  <div class="leaflet-pane leaflet-overlay-pane">
-                    <canvas class="leaflet-zoom-animated" width="2210" height="2906" style="transform: translate3d(-237px, -121px, 0px); width: 1105px; height: 1453px;"></canvas>
-                  </div>
-                  <div class="leaflet-pane leaflet-marker-pane"></div>
-                  <div class="leaflet-pane leaflet-tooltip-pane"></div>
-                  <div class="leaflet-pane leaflet-popup-pane"></div>
-                  <div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(8799.5px, 5665.5px, 0px) scale(32);"></div>
-                </div>
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-auto p-0">
+            <div class="tab_places">
+              <div class="tab_places__icon">
+                <img src="/images/places_550.png" alt="Places">
+              </div>
+          <div class="tab_places__label">Places</div>
+          <div class="d-grid gap-3 mx-auto text-center">
+            <button class="btn btn-secondary entity-button" type="button">CEMETERIES</button>
+            <button class="btn btn-secondary entity-button" type="button">CHURCHES</button>
+            <button class="btn btn-secondary entity-button" type="button">MONASTERIES</button>
+            <button class="btn btn-secondary entity-button" type="button">FORTRESSES</button>
+          </div>
+        </div>
+    </div>
+    <div class="col-md-auto p-0">
+      <div id="map" class="leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0">
                 <div class="leaflet-control-container">
                   <div class="leaflet-top leaflet-left"></div>
                   <div class="leaflet-top leaflet-right">
@@ -215,9 +201,10 @@
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            
+        </div>
+          
+    </div>   
+  </div>        
 </main>
 
 
