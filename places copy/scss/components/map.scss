@@ -1,0 +1,10 @@
+#mycontent {
+    display: flex;
+    flex-direction: row; // Ensure the children are in a row
+
+    #map {
+        flex: 1; // Take up remaining space
+        z-index: 1;
+    }
+
+}

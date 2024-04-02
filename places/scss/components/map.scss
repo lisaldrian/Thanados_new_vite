@@ -11,7 +11,7 @@
         }
         .leaflet-pane {
             &.leaflet-map-pane {
-                transform: translate3d(152px, 0px, 0px);
+                /*transform: translate3d(152px, 0px, 0px);*/
             }
             &.leaflet-tile-pane {
                 .leaflet-layer {
@@ -24,7 +24,7 @@
                         .leaflet-tile {
                             width: 256px;
                             height: 256px;
-                            position: absolute;
+                            position: relative;
                             opacity: 1;
                             transition: opacity 0.2s ease-in-out;
                             // Add more styles as needed

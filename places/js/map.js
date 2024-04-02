@@ -14,9 +14,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // Get the width of the tab_places element
     var tabPlacesWidth = document.querySelector('.tab_places').offsetWidth;
 
-    // Calculate the right position for the map
-    var mapRight = window.innerWidth - tabPlacesWidth;
-
     // Calculate the adjusted initial view for the map
     var adjustedMapView = [47.5162, 14.5501]; // Example coordinates
 
@@ -28,9 +25,8 @@ document.addEventListener('DOMContentLoaded', function () {
         attribution: '© OpenStreetMap contributors'
     }).addTo(map);
 
-    // Set the top and right positions of the map
+    // Set the top position of the map
     map.getContainer().style.top = mapTop + 'px';
-    map.getContainer().style.right = mapRight + 'px';
 
     // Optionally, you can set the size of the map dynamically based on the window size
     function resizeMap() {
