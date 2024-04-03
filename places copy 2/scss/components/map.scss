@@ -1,10 +1,13 @@
+@use '../util'as *;
+
 #map-container {
-    background-color: goldenrod;
+   // background-color: goldenrod; (test color to see column)
+    padding:0;
 }
 
 #map {
     position: relative;
-    border-radius: 5px;
+    border-radius: rem(5);
     height: 100vh;
     width: 100%;  /* This means "100% of the width of its container", the .col-md-10 */
     

@@ -2,13 +2,16 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to initialize the map and set its position
     function initializeMap() {
         // Get the navbar element
-        var navbar = document.querySelector('.navbar');
+        var navbar = document.querySelector('#mynavbar');
+
+        // Get the height of the navbar
+        var navbarHeight = navbar.offsetHeight;
 
         // Get the position of the navbar relative to the viewport
         var navbarRect = navbar.getBoundingClientRect();
 
-        // Calculate the top position for the map, taking into account the navbar height
-        var mapTop = navbarRect.bottom;
+        // Calculate the top position for the map
+        var mapTop = navbarRect.bottom + window.scrollY;
 
         // Initialize the map
         var map = L.map('map').setView([47.5162, 14.5501], 6); // Example coordinates
@@ -20,7 +23,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Set the top position of the map
         map.getContainer().style.position = 'relative';
-        map.getContainer().style.top = mapTop + 'px';
+        map.getContainer().style.top = mapTop - navbarHeight + 'px';
+
+        console.log("mapTop:", mapTop);
+        console.log("navbarHeight:", navbarHeight);
+    
 
         // Call the resizeMap function initially and whenever the window is resized
         window.addEventListener('resize', resizeMap);
