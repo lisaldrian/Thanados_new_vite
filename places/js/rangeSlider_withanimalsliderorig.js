@@ -29,7 +29,7 @@ let slider2 = new RangeSliderPips({
     pipstep: 10,
     all: "label",
     //suffix: " AD", "BC" for values
-    
+
   }
 });
 
@@ -42,53 +42,53 @@ let $s24 = document.querySelector(".s24");
 // slider 1 bindings
 
 function setHandles(e) {
-let labels = e.detail.values;
-let handles = document.getElementById("slider").querySelectorAll(".rangeHandle");
-let handle = document.getElementById("slider").querySelectorAll(".rangeHandle.active");
-Array.prototype.forEach.call(handles,(el,i)=> {
-  el.children[1].innerHTML = labels[i] + s1animals[i];
-});
-s1vals = e.detail.values;
+  let labels = e.detail.values;
+  let handles = document.getElementById("slider").querySelectorAll(".rangeHandle");
+  let handle = document.getElementById("slider").querySelectorAll(".rangeHandle.active");
+  Array.prototype.forEach.call(handles, (el, i) => {
+    el.children[1].innerHTML = labels[i] + s1animals[i];
+  });
+  s1vals = e.detail.values;
 }
 
-setHandles({ detail: { values: s1vals }});
+setHandles({detail: {values: s1vals}});
 
 // .$on() is a svelte component function
 // https://svelte.dev/docs#$on
 slider.$on('change', setHandles);
 
-$btn.addEventListener( "click", function() {
-$btn.innerText = "the values are: " + s1vals;
-setTimeout(() => {
-  $btn.innerText = "Get Values";
-}, 1500 );
+$btn.addEventListener("click", function () {
+  $btn.innerText = "the values are: " + s1vals;
+  setTimeout(() => {
+    $btn.innerText = "Get Values";
+  }, 1500);
 })
 
-// slider 2 bindings 
+// slider 2 bindings
 
 // .$on() is a svelte component function
 // https://svelte.dev/docs#$on
-slider2.$on('change', function(e) {
-$s21.value = e.detail.values[0];
-$s22.value = e.detail.values[1];
-$s23.value = e.detail.values[0]; 
-$s24.value = e.detail.values[1];
+slider2.$on('change', function (e) {
+  $s21.value = e.detail.values[0];
+  $s22.value = e.detail.values[1];
+  $s23.value = e.detail.values[0];
+  $s24.value = e.detail.values[1];
 });
 
 // .set() is a svelte component function
 // https://svelte.dev/docs#$set
 $s21.addEventListener("change", (e) => {
-slider2.$set({ values: [ $s21.value, $s22.value ]});
+  slider2.$set({values: [$s21.value, $s22.value]});
 });
 
 $s22.addEventListener("change", (e) => {
-slider2.$set({ values: [ $s21.value, $s22.value ]});
+  slider2.$set({values: [$s21.value, $s22.value]});
 });
 
 $s23.addEventListener("change", (e) => {
-  slider2.$set({ values: [ $s23.value, $s24.value ]});
+  slider2.$set({values: [$s23.value, $s24.value]});
 });
 
 $s24.addEventListener("change", (e) => {
-  slider2.$set({ values: [ $s23.value, $s24.value ]});
+  slider2.$set({values: [$s23.value, $s24.value]});
 });

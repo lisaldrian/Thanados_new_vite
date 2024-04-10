@@ -14,30 +14,31 @@
   box-sizing: border-box;
   z-index: 1500;
 }
-  
-  #slider2, 
-  #slider3 {
-    flex:1;
-    margin-right: 20px;}
-  
+
+#slider2,
+#slider3 {
+  flex: 1;
+  margin-right: 20px;
+}
+
 
 #slider-container .rangeSlider {
   z-index: 2000;
-  --range-slider:          #646c7c;
-  --handle-border:   var(--handle);
-  --range-inactive:  var(--handle-focus);
-  --range:           var(--handle-focus);
-  --float-inactive:  var(--handle-focus);
-  --float:           var(--handle-focus);
-  --float-text:        white;
-  --pip-active:        white;
-  --pip-active-text:   var(--pip-active);
-  
+  --range-slider: #646c7c;
+  --handle-border: var(--handle);
+  --range-inactive: var(--handle-focus);
+  --range: var(--handle-focus);
+  --float-inactive: var(--handle-focus);
+  --float: var(--handle-focus);
+  --float-text: white;
+  --pip-active: white;
+  --pip-active-text: var(--pip-active);
+
   --handle1: #00cfff;
   --handle2: #3edd8b;
   --handle3: #ff2b66;
   --handle4: #f5d556;
-  
+
 }
 
 /* slider handle color overrides
@@ -52,12 +53,15 @@
 .rangeSlider .rangeHandle:nth-of-type(1) {
   --handle: var(--handle1);
 }
+
 .rangeSlider .rangeHandle:nth-of-type(2) {
   --handle: var(--handle2);
 }
+
 .rangeSlider .rangeHandle:nth-of-type(3) {
   --handle: var(--handle3);
 }
+
 .rangeSlider .rangeHandle:nth-of-type(4) {
   --handle: var(--handle4);
 }
@@ -68,26 +72,31 @@
 #slider-container .rangeSlider {
   height: 3px;
 }
+
 .rangeSlider {
   .rangeNub {
     opacity: 0.5;
   }
+
   &.focus,
-  &:hover { 
+  &:hover {
     .rangeNub {
       opacity: 0.75;
     }
   }
+
   .rangeHandle.active {
     .rangeNub {
       opacity: 1;
     }
   }
 }
+
 #slider-container .rangeSlider .rangeFloat {
   opacity: 0.5;
   background: transparent;
 }
+
 #slider-container .rangeSlider.focus .rangeFloat {
   opacity: 1;
 }
@@ -101,6 +110,7 @@
     width: 15px;
     height: 15px;
     top: 1px;
+
     .rangeNub {
       opacity: 1;
     }
@@ -113,9 +123,11 @@
 #slider-container .rangeSlider .pip {
   height: 4px;
   font-weight: 200;
+
   &.selected .pipVal {
     font-weight: 300;
   }
+
   .pipVal {
     display: none;
     font-size: 12px;
@@ -125,12 +137,15 @@
 
 #slider-container .rangeSlider .pip:nth-child(5n+1) {
   height: 8px;
+
   &.selected {
     height: 12px;
+
     .pipVal {
       top: 12px;
     }
   }
+
   .pipVal {
     display: block;
   }
@@ -138,8 +153,9 @@
 
 #slider-container .rangeSlider .rangeBar {
   height: 3px;
-  background: linear-gradient(90deg, var(--handle1), var(--handle1) 25%, var(--handle2) 75%, var(--handle2) );
+  background: linear-gradient(90deg, var(--handle1), var(--handle1) 25%, var(--handle2) 75%, var(--handle2));
 }
+
 #slider3 .rangeSlider .rangeBar {
   background: linear-gradient(90deg, var(--handle3), var(--handle3) 25%, var(--handle4) 75%, var(--handle4));
 }
@@ -151,15 +167,17 @@
 
 #slider-container .rangePips .pip,
 #slider-container .rangePips .pipVal {
- transition: all .66s ease-out;
+  transition: all .66s ease-out;
 }
+
 #slider-container .rangePips .pip.selected,
 #slider-container .rangePips .pip.selected .pipVal {
- transition: none;
+  transition: none;
 }
+
 #slider-container .range .rangePips .pip.selected,
 #slider-container .range .rangePips .pip.selected .pipVal {
- transition: all 0.15s ease;
+  transition: all 0.15s ease;
 }
 
 /* misc styling
@@ -169,15 +187,15 @@
 #slider2 {
   position: relative;
   max-width: 500px;
-  margin: 10px ;
-  padding:  0 80px;
+  margin: 10px;
+  padding: 0 80px;
 }
 
 input {
   appearance: textfield;
   -moz-appearance: textfield;
   border: none;
-  background: rgba(0,0,0,0.2);
+  background: rgba(0, 0, 0, 0.2);
   padding: 3px 3px;
   border-radius: 3px;
   color: #ffffff88;
@@ -190,6 +208,7 @@ input {
   left: 0;
   top: -10px;
 }
+
 .s22 {
   right: 0;
   left: auto;
@@ -202,6 +221,7 @@ input {
   left: 0;
   top: -10px;
 }
+
 .s24 {
   right: 0;
   left: auto;
@@ -230,12 +250,12 @@ h1, h2 {
   font-size: 13px;
   position: absolute;
   transform: translate(-50%, 50px);
-  border: 1px solid rgba(255,255,255,0.1);
-  background: linear-gradient( 180deg, rgba(0,0,0,0.2) 0%,  rgba(0,0,0,0.3) 100% );
-  color: rgba(255,255,255,0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.3) 100%);
+  color: rgba(255, 255, 255, 0.6);
   padding: 6px 12px;
   border-radius: 4px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 p {
@@ -248,6 +268,7 @@ a {
   border-bottom: 1px dotted transparent;
   transition: all 2s ease;
 }
+
 a:hover {
   border-color: inherit;
   color: #50ffc6;

@@ -19,9 +19,9 @@ const colorModeFromLocalStorage = () => {
 };
 
 const colorModeFromPreferences = () => {
-  return window.matchMedia('(prefers-color-scheme: dark)').matches 
-              ? 'dark'
-              : 'light';// If preference is set or does not match anything (light is default)
+  return window.matchMedia('(prefers-color-scheme: dark)').matches
+    ? 'dark'
+    : 'light';// If preference is set or does not match anything (light is default)
 };
 
 const loadAndUpdateColor = () => {
@@ -49,8 +49,8 @@ loadAndUpdateColor();
 // when the prefers-color-scheme changes, this event will be emitted
 // event reflects the media query, if it matches, the new color is dark, else it is light
 window.matchMedia('(prefers-color-scheme: dark)')
-      .addEventListener('change', (event) => {
-        event.matches ? darkButton.click() : lightButton.click();
-      });
+  .addEventListener('change', (event) => {
+    event.matches ? darkButton.click() : lightButton.click();
+  });
 
 

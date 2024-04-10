@@ -1,12 +1,12 @@
-/* 
-The first time the page is loaded, the color mode set on the preference 
-is used and set as 'default' in the local storage. 
-Changing the default preferences works the same way as changing the 
+/*
+The first time the page is loaded, the color mode set on the preference
+is used and set as 'default' in the local storage.
+Changing the default preferences works the same way as changing the
 color mode using the buttons, if the page is loaded.
 When the page is reloaded, whatever is the value set on the local storage
 has precedence over the values in the preference. If the preference
-changed after the page was visited - and the page is not loaded - 
-the last value saved on the local storage is loaded. 
+changed after the page was visited - and the page is not loaded -
+the last value saved on the local storage is loaded.
 */
 
 const darkButton = document.getElementById('dark');
@@ -27,9 +27,9 @@ const colorModeFromLocalStorage = () => {
 };
 
 const colorModeFromPreferences = () => {
-  return window.matchMedia('(prefers-color-scheme: dark)').matches 
-              ? 'dark'
-              : 'light' // If preference is set or does not match anything (light is default)
+  return window.matchMedia('(prefers-color-scheme: dark)').matches
+    ? 'dark'
+    : 'light' // If preference is set or does not match anything (light is default)
 };
 
 const loadAndUpdateColor = () => {
@@ -49,9 +49,9 @@ radioButtons.forEach(button => {
 // when the prefers-color-scheme changes, this event will be emitted
 // event reflects the media query, if it matches, the new color is dark, else it is light
 window.matchMedia('(prefers-color-scheme: dark)')
-      .addEventListener('change', (event) => {
-        event.matches ? darkButton.click() : lightButton.click();
-      });
-      
+  .addEventListener('change', (event) => {
+    event.matches ? darkButton.click() : lightButton.click();
+  });
+
 // Load the right color on startup - localStorage has precedence
 loadAndUpdateColor();

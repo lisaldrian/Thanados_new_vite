@@ -1,15 +1,15 @@
 @use '../util'as *;
 
 #map-container {
-   // background-color: goldenrod; (test color to see column)
-   margin-top: rem(15);
-   padding:0;
+  // background-color: goldenrod; (test color to see column)
+  margin-top: rem(15);
+  padding: 0;
 }
 
 #map {
-    position: relative;
-    border-radius: rem(5);
-    height: 100vh;
-    width: 100%;  /* 100% of the width of its container, the .col-md-10 */
-    
+  position: relative;
+  border-radius: rem(5);
+  height: 100vh;
+  width: 100%; /* 100% of the width of its container, the .col-md-10 */
+
 }

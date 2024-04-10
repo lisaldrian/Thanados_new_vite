@@ -1,12 +1,12 @@
 @use '../util' as *;
 
 #counters {
-    position: fixed;
-    bottom: rem(100);
-    left: 0;
-    right: 0;
-    background-color: var(--counters-bg);
-    z-index: 2;
+  position: fixed;
+  bottom: rem(100);
+  left: 0;
+  right: 0;
+  background-color: var(--counters-bg);
+  z-index: 2;
 }
 
 /*#counters .col-sm:not(:last-child) {

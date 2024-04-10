@@ -1,14 +1,14 @@
-import { resolve } from 'path';
-import { defineConfig } from 'vite';
+import {resolve} from 'path';
+import {defineConfig} from 'vite';
 import sass from 'vite-plugin-sass';
 
 export default defineConfig({
-    root: resolve(__dirname), // Adjust the path if your vite.config.js is not in the project root
-    resolve: {
-      alias: {
-        '~bootstrap': resolve(__dirname, 'node_modules/bootstrap'),
-      }
-    },
+  root: resolve(__dirname), // Adjust the path if your vite.config.js is not in the project root
+  resolve: {
+    alias: {
+      '~bootstrap': resolve(__dirname, 'node_modules/bootstrap'),
+    }
+  },
 
   build: {
     rollupOptions: {
