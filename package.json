@@ -19,7 +19,6 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
-    "al-range-slider": "file:../../../Desktop/REPLICO/Frontend/al-range-slider/al-range-slider-1.0.0.tgz",
     "bootstrap": "^5.3.3",
     "jquery": "^3.7.1"
   }
