@@ -5,7 +5,7 @@
 /* ****************************** */
 
 
-#app .rangeSlider {
+#slider-container .rangeSlider {
   z-index: 2000;
   --range-slider:          #646c7c;
   --handle-border:   var(--handle);
@@ -49,7 +49,7 @@
 /* shared slider styles
 /* ****************************** */
 
-#app .rangeSlider {
+#slider-container .rangeSlider {
   height: 3px;
 }
 .rangeSlider {
@@ -68,11 +68,11 @@
     }
   }
 }
-#app .rangeSlider .rangeFloat {
+#slider-container .rangeSlider .rangeFloat {
   opacity: 0.5;
   background: transparent;
 }
-#app .rangeSlider.focus .rangeFloat {
+#slider-container .rangeSlider.focus .rangeFloat {
   opacity: 1;
 }
 
@@ -107,7 +107,7 @@
 /* pips under sliders styling
 /* ****************************** */
 
-#app .rangeSlider .pip {
+#slider-container .rangeSlider .pip {
   height: 4px;
   font-weight: 200;
   &.selected .pipVal {
@@ -120,7 +120,7 @@
   }
 }
 
-#app .rangeSlider .pip:nth-child(5n+1) {
+#slider-container .rangeSlider .pip:nth-child(5n+1) {
   height: 8px;
   &.selected {
     height: 12px;
@@ -133,21 +133,21 @@
   }
 }
 
-#app .rangeSlider .rangeBar {
+#slider-container .rangeSlider .rangeBar {
   height: 3px;
   background: linear-gradient(90deg, var(--handle1), var(--handle1) 25%, var(--handle2) 75%, var(--handle2) );
 }
 
-#app .rangePips .pip,
-#app .rangePips .pipVal {
+#slider-container .rangePips .pip,
+#slider-container .rangePips .pipVal {
  transition: all .66s ease-out;
 }
-#app .rangePips .pip.selected,
-#app .rangePips .pip.selected .pipVal {
+#slider-container .rangePips .pip.selected,
+#slider-container .rangePips .pip.selected .pipVal {
  transition: none;
 }
-#app .range .rangePips .pip.selected,
-#app .range .rangePips .pip.selected .pipVal {
+#slider-container .range .rangePips .pip.selected,
+#slider-container .range .rangePips .pip.selected .pipVal {
  transition: all 0.15s ease;
 }
 
@@ -209,7 +209,7 @@ h1, h2 {
   margin: 5px 0;
 }
 
-#app {
+#slider-container {
   margin-top: 90px;
 }
 
