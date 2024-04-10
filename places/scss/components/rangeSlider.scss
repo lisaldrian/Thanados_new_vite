@@ -1,9 +1,25 @@
-
 @use '../util'as *;
 
 /* slider colorings overrides
 /* ****************************** */
-
+#slider-container {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #565353; /* Optional: Change the background color */
+  padding: 10px;
+  box-sizing: border-box;
+  z-index: 1500;
+}
+  
+  #slider2, 
+  #slider3 {
+    flex:1;
+    margin-right: 20px;}
+  
 
 #slider-container .rangeSlider {
   z-index: 2000;
@@ -18,8 +34,8 @@
   --pip-active-text:   var(--pip-active);
   
   --handle1: #00cfff;
-  --handle3: #ff2b66;
   --handle2: #3edd8b;
+  --handle3: #ff2b66;
   --handle4: #f5d556;
   
 }
@@ -76,24 +92,11 @@
   opacity: 1;
 }
 
-/* first slider styling
-/* ****************************** */
-
-#slider {
-  .rangeHandle {
-    width: 20px;
-    height: 13px;
-    top: 1px;
-    .rangeNub {
-      border-radius: 4px;
-    }
-  }
-}
-
 /* second slider styling
 /* ****************************** */
 
-#slider2 {
+#slider2,
+#slider3 {
   .rangeHandle {
     width: 15px;
     height: 15px;
@@ -137,6 +140,14 @@
   height: 3px;
   background: linear-gradient(90deg, var(--handle1), var(--handle1) 25%, var(--handle2) 75%, var(--handle2) );
 }
+#slider3 .rangeSlider .rangeBar {
+  background: linear-gradient(90deg, var(--handle3), var(--handle3) 25%, var(--handle4) 75%, var(--handle4));
+}
+
+#slider3 .rangeSlider .rangeNub {
+  background: linear-gradient(var(--handle3), var(--handle3) 25%, var(--handle4) 75%, var(--handle4));
+}
+
 
 #slider-container .rangePips .pip,
 #slider-container .rangePips .pipVal {
@@ -151,24 +162,14 @@
  transition: all 0.15s ease;
 }
 
-
-
-
-
-
-
-
-
-
-
 /* misc styling
 /* ***************** */
 
-#slider,
+#slider3, //this works for slider 3
 #slider2 {
   position: relative;
-  max-width: 640px;
-  margin: 20px auto 140px;
+  max-width: 500px;
+  margin: 10px ;
   padding:  0 80px;
 }
 
@@ -177,19 +178,31 @@ input {
   -moz-appearance: textfield;
   border: none;
   background: rgba(0,0,0,0.2);
-  padding: 5px 5px;
+  padding: 3px 3px;
   border-radius: 3px;
   color: #ffffff88;
 }
 
 .s21,
-.s22 {
+.s22, {
   width: 50px;
   position: absolute;
   left: 0;
   top: -10px;
 }
 .s22 {
+  right: 0;
+  left: auto;
+}
+
+.s23,
+.s24, {
+  width: 50px;
+  position: absolute;
+  left: 0;
+  top: -10px;
+}
+.s24 {
   right: 0;
   left: auto;
 }
@@ -240,3 +253,7 @@ a:hover {
   color: #50ffc6;
   transition: all .2s ease;
 }
+
+
+
+
