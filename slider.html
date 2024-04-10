@@ -33,6 +33,15 @@
    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
      crossorigin=""></script>
+
+
+<!-- Include jQuery UI -->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<!-- Include jQuery UI Slider Pips extension CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery-ui-Slider-Pips/1.11.4/jquery-ui-slider-pips.min.css">
+<!-- Include jQuery UI Slider Pips extension JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-ui-Slider-Pips/1.11.4/jquery-ui-slider-pips.js"></script>
+
     <!-- Custom JavaScript -->
   <script defer src="home/js/script.js"></script>
 
@@ -135,33 +144,13 @@
 
 </header>
 
-<main class="container-fluid">
-  <div class="row">
-    <div class="col-md-10" id="map-container">
-      <div id="map"></div>
-      <!-- Content for the left column -->
-    </div>
-    <div class="col-md-2" id="sidebar">
-      <div class="tab_places">
-      <div class="tab_places__icon">
-        <img src="/images/places_550.png" alt="Places">
-      </div>
-<div class="tab_places__label">Places</div>
-<div class="d-grid gap-3 mx-auto text-center">
-<button class="btn btn-secondary entity-button" type="button">CEMETERIES</button>
-<button class="btn btn-secondary entity-button" type="button">CHURCHES</button>
-<button class="btn btn-secondary entity-button" type="button">MONASTERIES</button>
-<button class="btn btn-secondary entity-button" type="button">FORTRESSES</button>
-</div>
+    <main>
+        
+        <div id="flat-slider"></div>
+       
+    </main>
 
-      <!-- Content for the right column -->
-    </div>
-  </div>
-
-  
-<script src="places copy 2/js/map.js"></script>
-</main>
-
+    <script src="places copy 2/js/slider.js"></script>
 
 
 </body>
