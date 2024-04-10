@@ -1,0 +1,11 @@
+@use '../util'as *;
+
+#time-slider {
+    position: fixed;
+    height: 100px;
+    bottom: 0;
+    width: 100%;
+    padding-right: 0;
+    background-color: grey;
+    z-index: 1000;
+}

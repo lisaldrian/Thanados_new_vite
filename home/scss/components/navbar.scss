@@ -4,12 +4,14 @@
    // flex-wrap: nowrap; /* Prevent wrapping of navbar items */
     //overflow-x: auto; /* Enable horizontal scrolling for overflow */
     white-space: nowrap; /* Prevent text wrapping */
+   
     
     
 }
 .container-fluid //navbar container
     //{background-color: var(--navbar-color);}
     {max-height: 80px}
+    
 
 
     @media (max-width: 992px) {
