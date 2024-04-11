@@ -16,11 +16,14 @@
   background: var(--card-bg);
   color: var(--text-color2);
   text-align: center;
-  padding: rem(20);
+  padding: rem(25);
   border-radius: rem(5);
   transition: backbround 150ms ease-in-out;
   cursor: pointer;
   z-index: 2;
+  @include breakpoint-down('medium') {
+    padding: rem(10); // Adjust font size for medium screens
+  }
 
   &__icon {
     img {
@@ -69,7 +72,7 @@
 
   // Define button sizes
   $button-sizes: (
-          'small': (padding-y: 5px, padding-x: 2px, font-size: 12px, border-radius: 3px),
+          'small': (padding-y: 5px, padding-x: 2px, font-size: 11px, border-radius: 3px),
           'medium': (padding-y: 8px, padding-x: 3px, font-size: 14px, border-radius: 5px),
           'large': (padding-y: 10px, padding-x: 10px, font-size: 16px, border-radius: 7px),
           'xlarge': (padding-y: 15px, padding-x: 10px, font-size: 18px, border-radius: 7px)
@@ -107,7 +110,7 @@
     background-color: var(--entity-button);
     color: var(--entity-button-font);
     border-color: var(--entity-button);
-
+    position: center;
 
     @include button-size('medium'); // Default size for medium screens
     @include breakpoint-down('small') {
