@@ -160,8 +160,13 @@
   background: linear-gradient(90deg, var(--handle3), var(--handle3) 25%, var(--handle4) 75%, var(--handle4));
 }
 
-#slider3 .rangeSlider .rangeNub {
-  background: linear-gradient(var(--handle3), var(--handle3) 25%, var(--handle4) 75%, var(--handle4));
+/* slider3 styling */
+#slider3 .rangeSlider .rangeHandle:nth-of-type(1) {
+  --handle: var(--handle3); /* Assigning the first handle color for slider 3 */
+}
+
+#slider3 .rangeSlider .rangeHandle:nth-of-type(2) {
+  --handle: var(--handle4); /* Assigning the second handle color for slider 3 */
 }
 
 
