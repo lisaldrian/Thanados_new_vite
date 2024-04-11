@@ -23,6 +23,8 @@
   --light-text2: hsl(230, 17%, 14%);
   --light-card: hsl(0, 0%, 85%);
   --light-card-hover: hsl(227, 33%, 91%);
+  --slider-container-light: hsl(101, 33%, 68%);
+  --slider-container-dark: hsl(100, 16%, 34%);
 
   --toggle: var(--toggle-light);
   --background: var(--light-bg);
@@ -30,6 +32,7 @@
   --text-color2: var(--light-text1);
   --card-bg: var(--light-card);
   --card-hover: var(--light-card-hover);
+  --slider-container: var(--slider-container-light);
 
   --toggle-bg: var(--toggle-bg-light);
   --toggle-button: var(--toggle-button-light);
@@ -49,6 +52,7 @@
                     var(--toggle-bg-start) 98.02%
     );
     --toggle-button: var(--dark-bg);
+    --slider-container: var(--slider-container-dark);
   }
 }
 
@@ -71,6 +75,7 @@ body.light {
                   var(--toggle-bg-start) 98.02%
   );
   --toggle-button: var(--toggle-button-light);
+  --slider-container: var(--slider-container-light);
 }
 
 
@@ -87,4 +92,5 @@ body.dark {
                   var(--toggle-bg-start) 98.02%
   );
   --toggle-button: var(--dark-bg);
+  --slider-container: var(--slider-container-dark);
 }
