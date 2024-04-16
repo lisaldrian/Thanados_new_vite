@@ -4,20 +4,28 @@
 /* ****************************** */
 #slider-container {
   display: flex;
+  height: 90px;
   //justify-content: space-between;
   position: fixed;
   bottom: 0;
   left: 0;
   background-color: var(--card-bg); /* Optional: Change the background color */
-  box-sizing: border-box;
   z-index: 1500;
 }
 
+#slider3, 
 #slider2,
-#slider3 {
+#filter-options
+{
   flex: 1;
-  margin-right: 20px;
+  position: relative;
+  max-width: 600px;
+  margin: 0;
+  padding: 0 80px;
 }
+
+
+
 
 
 #slider-container .rangeSlider {
@@ -186,13 +194,7 @@
 /* misc styling
 /* ***************** */
 
-#slider3, //this works for slider 3
-#slider2 {
-  position: relative;
-  max-width: 500px;
-  margin: 10px;
-  padding: 0 80px;
-}
+
 
 input {
   appearance: textfield;
@@ -279,3 +281,16 @@ a:hover {
 
 
 
+@media (max-width: 639px) {
+  #slider-container {
+    flex-direction: column;
+    height: auto; /* Reset height to let sliders stack */
+  }
+
+  #slider2, #slider3 {
+    max-width: none; /* Reset max-width */
+    padding: 0 20px 0 70px; /* Adjust padding as needed */
+    align-items:normal;
+  }
+
+}
