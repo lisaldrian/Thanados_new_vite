@@ -1,22 +1,17 @@
-@use '../util'as *;
-
-/* slider colorings overrides
-/* ****************************** */
+/* Shared Slider Styles */
 #slider-container {
   display: flex;
   height: 90px;
-  //justify-content: space-between;
   position: fixed;
   bottom: 0;
   left: 0;
-  background-color: var(--card-bg); /* Optional: Change the background color */
+  background-color: var(--card-bg);
   z-index: 1500;
 }
 
-#slider3, 
+#slider3,
 #slider2,
-#filter-options
-{
+#filter-options {
   flex: 1;
   position: relative;
   max-width: 600px;
@@ -24,10 +19,7 @@
   padding: 0 80px;
 }
 
-
-
-
-
+/* Range Slider Styles */
 #slider-container .rangeSlider {
   z-index: 2000;
   --range-slider: #b1b2b3;
@@ -44,12 +36,9 @@
   --handle2: #3edd8b;
   --handle3: #ff2b66;
   --handle4: #f5d556;
-
 }
 
-/* slider handle color overrides
-/* ****************************** */
-
+/* Slider Handle Color Overrides */
 .rangeSlider .rangeHandle {
   --handle-focus: var(--handle);
   --handle-inactive: var(--handle);
@@ -72,9 +61,7 @@
   --handle: var(--handle4);
 }
 
-/* shared slider styles
-/* ****************************** */
-
+/* Shared Slider Styles (Continued) */
 #slider-container .rangeSlider {
   height: 3px;
 }
@@ -103,13 +90,6 @@
   background: transparent;
 }
 
-#slider-container .rangeSlider.focus .rangeFloat {
-  opacity: 1;
-}
-
-/* second slider styling
-/* ****************************** */
-
 #slider2,
 #slider3 {
   .rangeHandle {
@@ -123,9 +103,7 @@
   }
 }
 
-/* pips under sliders styling
-/* ****************************** */
-
+/* Pips Styling */
 #slider-container .rangeSlider .pip {
   height: 4px;
   font-weight: 200;
@@ -166,43 +144,23 @@
   background: linear-gradient(90deg, var(--handle3), var(--handle3) 25%, var(--handle4) 75%, var(--handle4));
 }
 
-/* slider3 styling */
+/* Slider3 Styling */
 #slider3 .rangeSlider .rangeHandle:nth-of-type(1) {
-  --handle: var(--handle3); /* Assigning the first handle color for slider 3 */
+  --handle: var(--handle3);
 }
 
 #slider3 .rangeSlider .rangeHandle:nth-of-type(2) {
-  --handle: var(--handle4); /* Assigning the second handle color for slider 3 */
+  --handle: var(--handle4);
 }
 
-
-#slider-container .rangePips .pip,
-#slider-container .rangePips .pipVal {
-  transition: all .66s ease-out;
-}
-
-#slider-container .rangePips .pip.selected,
-#slider-container .rangePips .pip.selected .pipVal {
-  transition: none;
-}
-
-#slider-container .range .rangePips .pip.selected,
-#slider-container .range .rangePips .pip.selected .pipVal {
-  transition: all 0.15s ease;
-}
-
-/* misc styling
-/* ***************** */
-
-
-
+/* Other Styles */
 input {
   appearance: textfield;
   -moz-appearance: textfield;
   font-size: 12px;
   border: none;
   background: rgba(0, 0, 0, 0.2);
-  padding: 3px 3px;
+  padding: 3px;
   border-radius: 3px;
   color: #ffffff88;
 }
@@ -212,6 +170,15 @@ label {
   color: black;
 }
 
+/* App Styling */
+body {
+  --bg: #333844;
+  color: white;
+  background: var(--bg);
+  text-align: center;
+}
+
+/* Miscellaneous Styling */
 .s21,
 .s22,
 .s23,
@@ -228,20 +195,8 @@ label {
   top: 45px;
 }
 
-
-/* app styling
-/* ***************** */
-
-body {
-  --bg: #333844;
-  color: white;
-  background: var(--bg);
-  //font-family: "Heebo", sans-serif;
-  //font-size: 12px;
-  text-align: center;
-}
-
-h1, h2 {
+h1,
+h2 {
   margin: 5px 0;
 }
 
@@ -278,19 +233,17 @@ a:hover {
   transition: all .2s ease;
 }
 
-
-
-
+/* Media Query */
 @media (max-width: 639px) {
   #slider-container {
     flex-direction: column;
-    height: auto; /* Reset height to let sliders stack */
+    height: auto;
   }
 
-  #slider2, #slider3 {
-    max-width: none; /* Reset max-width */
-    padding: 0 20px 0 70px; /* Adjust padding as needed */
-    align-items:normal;
+  #slider2,
+  #slider3 {
+    max-width: none;
+    padding: 0 20px 0 70px;
+    align-items: normal;
   }
-
 }
