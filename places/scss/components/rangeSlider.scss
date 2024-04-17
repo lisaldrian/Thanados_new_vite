@@ -7,6 +7,8 @@
   left: 0;
   background-color: var(--card-bg);
   z-index: 1500;
+  text-align: center;
+  
 }
 
 #slider3,
@@ -172,10 +174,8 @@ label {
 
 /* App Styling */
 body {
-  --bg: #333844;
-  color: white;
-  background: var(--bg);
-  text-align: center;
+
+  //text-align: center;
 }
 
 /* Miscellaneous Styling */
